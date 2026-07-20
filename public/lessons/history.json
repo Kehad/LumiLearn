@@ -1,0 +1,29 @@
+[
+  {
+    "lessonId": "5f4b327a-394b-4c94-9e1c-5db1c7b5ac22",
+    "title": "Introduction to Axial skeletion",
+    "topic": "Axial skeletion",
+    "subject": "biology",
+    "timestamp": "2026-07-19T01:16:46.273Z",
+    "thumbnailUrl": "/lessons/5f4b327a-394b-4c94-9e1c-5db1c7b5ac22/scenes/scene_1/image.png",
+    "quizScore": null
+  },
+  {
+    "lessonId": "9ddf21a4-121e-483d-bce8-e38260c6c7ef",
+    "title": "Photosynthesis: How Plants Make Food",
+    "topic": "Photosynthesis in green leaves",
+    "subject": "biology",
+    "timestamp": "2026-07-19T01:12:46.797Z",
+    "thumbnailUrl": "/lessons/9ddf21a4-121e-483d-bce8-e38260c6c7ef/scenes/scene_1/image.png",
+    "quizScore": null
+  },
+  {
+    "lessonId": "e581fa29-5f38-450c-a68c-466cc1fb0afc",
+    "title": "Photosynthesis: How Plants Make Food",
+    "topic": "Photosynthesis in green leaves",
+    "subject": "biology",
+    "timestamp": "2026-07-19T01:01:08.263Z",
+    "thumbnailUrl": "/lessons/e581fa29-5f38-450c-a68c-466cc1fb0afc/scenes/scene_1/image.png",
+    "quizScore": null
+  }
+]

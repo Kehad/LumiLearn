@@ -1,0 +1,35 @@
+[
+  {
+    "question": "What is the main focus of this lesson?",
+    "options": [
+      "Understanding Axial skeletion",
+      "Memorizing dates",
+      "Learning a new language",
+      "Drawing pictures"
+    ],
+    "correctAnswer": "A",
+    "explanation": "This lesson simplifies the concepts of Axial skeletion to help you understand it easily."
+  },
+  {
+    "question": "Why do we break topics into smaller scenes?",
+    "options": [
+      "To make them harder",
+      "To make learning slow and clear",
+      "To write longer scripts",
+      "To use more paper"
+    ],
+    "correctAnswer": "B",
+    "explanation": "Breaking topics into visual chunks helps our brains process reading materials without stress."
+  },
+  {
+    "question": "Which examination does this study help you prepare for?",
+    "options": [
+      "TOEFL",
+      "SAT",
+      "WAEC / School Exams",
+      "Driving Test"
+    ],
+    "correctAnswer": "C",
+    "explanation": "LumiLearn matches your school's taxonomy to help you review topics tested in WAEC and local exams."
+  }
+]

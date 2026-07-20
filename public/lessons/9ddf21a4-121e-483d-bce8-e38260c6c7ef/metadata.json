@@ -1,0 +1,159 @@
+{
+  "lessonId": "9ddf21a4-121e-483d-bce8-e38260c6c7ef",
+  "title": "Photosynthesis: How Plants Make Food",
+  "topic": "Photosynthesis in green leaves",
+  "subject": "biology",
+  "timestamp": "2026-07-19T01:12:46.797Z",
+  "simplifiedScript": "Scene 1:\nAll living things need food to grow. While animals find food, plants make their own using sunlight.\n\nScene 2:\nInside plant leaves, there is a green pigment called chlorophyll. It acts like a solar panel to capture light.\n\nScene 3:\nPlants also absorb water from the soil through roots, and pull in carbon dioxide gas from the air.\n\nScene 4:\nSunlight splits water and gas into glucose sugar for food, and releases clean oxygen for us to breathe.\n",
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "narration": "All living things need food to grow. While animals find food, plants make their own using sunlight.",
+      "imagePrompt": "Vibrant vector of a smiling green plant absorbing warm yellow rays from the sun.",
+      "imageProvider": "mock",
+      "imageModel": "local-picsum-curated",
+      "imageCost": 0,
+      "ttsProvider": "mock",
+      "ttsVoice": "Google EN-Slow",
+      "ttsCost": 0,
+      "duration": 9.94
+    },
+    {
+      "sceneNumber": 2,
+      "narration": "Inside plant leaves, there is a green pigment called chlorophyll. It acts like a solar panel to capture light.",
+      "imagePrompt": "Microscopic flat illustration of plant cells showing green circles representing chlorophyll.",
+      "imageProvider": "mock",
+      "imageModel": "local-picsum-curated",
+      "imageCost": 0,
+      "ttsProvider": "mock",
+      "ttsVoice": "Google EN-Slow",
+      "ttsCost": 0,
+      "duration": 10.46
+    },
+    {
+      "sceneNumber": 3,
+      "narration": "Plants also absorb water from the soil through roots, and pull in carbon dioxide gas from the air.",
+      "imagePrompt": "Cross-section diagram of a tree showing roots drinking blue water drops from dark soil.",
+      "imageProvider": "mock",
+      "imageModel": "local-picsum-curated",
+      "imageCost": 0,
+      "ttsProvider": "mock",
+      "ttsVoice": "Google EN-Slow",
+      "ttsCost": 0,
+      "duration": 10.03
+    },
+    {
+      "sceneNumber": 4,
+      "narration": "Sunlight splits water and gas into glucose sugar for food, and releases clean oxygen for us to breathe.",
+      "imagePrompt": "Happy child breathing clean air next to a large tree, showing oxygen bubbles rising.",
+      "imageProvider": "mock",
+      "imageModel": "local-picsum-curated",
+      "imageCost": 0,
+      "ttsProvider": "mock",
+      "ttsVoice": "Google EN-Slow",
+      "ttsCost": 0,
+      "duration": 10.44
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What do plants use to capture sunlight?",
+      "options": [
+        "Chlorophyll",
+        "Roots",
+        "Stems",
+        "Oxygen"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Chlorophyll is the green pigment in leaves that absorbs sunlight like a solar panel."
+    },
+    {
+      "question": "What gas do plants release for humans to breathe?",
+      "options": [
+        "Carbon dioxide",
+        "Oxygen",
+        "Nitrogen",
+        "Helium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During photosynthesis, plants release oxygen, which humans and animals need to breathe."
+    },
+    {
+      "question": "Where do plants get water from?",
+      "options": [
+        "The air",
+        "The clouds",
+        "The soil through roots",
+        "The sun"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Plants absorb water and nutrients from the soil using their roots."
+    }
+  ],
+  "providers": {
+    "llm": "mock",
+    "image": "mock",
+    "tts": "mock"
+  },
+  "provenance": {
+    "steps": [
+      {
+        "name": "Simplify & Storyboard",
+        "provider": "mock",
+        "modelOrVoice": "mock (local rule-based generator)",
+        "durationMs": 1,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "Image Generation",
+        "provider": "mock",
+        "modelOrVoice": "local-picsum-curated, local-picsum-curated, local-picsum-curated, local-picsum-curated",
+        "durationMs": 3685,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "TTS Narration",
+        "provider": "mock",
+        "modelOrVoice": "Google EN-Slow, Google EN-Slow, Google EN-Slow, Google EN-Slow",
+        "durationMs": 7109,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "Captions Synchronizer",
+        "provider": "local",
+        "modelOrVoice": "WebVTT Phrase Extractor",
+        "durationMs": 1,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "Video Stitching (ffmpeg)",
+        "provider": "ffmpeg",
+        "modelOrVoice": "H.264 / AAC encoder",
+        "durationMs": 30788,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "Storage Upload",
+        "provider": "local",
+        "modelOrVoice": "Local Disk",
+        "durationMs": 0,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      }
+    ],
+    "totalCost": 0,
+    "totalDurationMs": 41608,
+    "b2Uploaded": false
+  }
+}
