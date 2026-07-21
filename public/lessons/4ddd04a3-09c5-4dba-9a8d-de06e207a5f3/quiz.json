@@ -1,0 +1,35 @@
+[
+  {
+    "question": "What heats up the water in lakes and oceans?",
+    "options": [
+      "The wind",
+      "The sun",
+      "Earth's core",
+      "Volcanoes"
+    ],
+    "correctAnswer": "B",
+    "explanation": "The sun's heat warms water on the surface, causing it to evaporate."
+  },
+  {
+    "question": "What are clouds made of?",
+    "options": [
+      "Cotton candy",
+      "Smoke",
+      "Invisible steam cooling into water droplets",
+      "Space dust"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Clouds form when rising water vapor (steam) cools and condenses back into liquid water droplets."
+  },
+  {
+    "question": "What is it called when rain falls from heavy clouds?",
+    "options": [
+      "Evaporation",
+      "Condensation",
+      "Precipitation (Rain)",
+      "Freezing"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Rain, snow, or sleet falling from the clouds back to Earth is called precipitation."
+  }
+]

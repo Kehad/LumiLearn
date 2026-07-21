@@ -1,0 +1,159 @@
+{
+  "lessonId": "4ddd04a3-09c5-4dba-9a8d-de06e207a5f3",
+  "title": "The Water Cycle: Earth's Recycling System",
+  "topic": "The water cycle shows the continuous movement of water within the Earth and atmosphere. It is a complex system that includes many different processes. Liquid water evaporates into water vapor, condenses to form clouds, and precipitates back to earth in the form of rain and snow.",
+  "subject": "general",
+  "timestamp": "2026-07-21T01:03:52.474Z",
+  "simplifiedScript": "Scene 1:\nThe water on Earth is millions of years old. It is constantly recycling in a loop called the water cycle.\n\nScene 2:\nFirst, the hot sun warms the water in oceans and lakes. The water turns into invisible steam and rises.\n\nScene 3:\nHigh in the cold sky, this steam cools down and gathers together to form soft white clouds.\n\nScene 4:\nWhen clouds get too heavy, they release the water as rain or snow, returning water back to the Earth.\n",
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "narration": "The water on Earth is millions of years old. It is constantly recycling in a loop called the water cycle.",
+      "imagePrompt": "Scenic flat graphic of a blue ocean, green mountains, and fluffy white clouds.",
+      "imageProvider": "mock",
+      "imageModel": "local-picsum-curated",
+      "imageCost": 0,
+      "ttsProvider": "mock",
+      "ttsVoice": "Google EN-Slow",
+      "ttsCost": 0,
+      "duration": 10.25
+    },
+    {
+      "sceneNumber": 2,
+      "narration": "First, the hot sun warms the water in oceans and lakes. The water turns into invisible steam and rises.",
+      "imagePrompt": "Warm golden sun beams shining down on a blue lake with curly steam lines rising.",
+      "imageProvider": "mock",
+      "imageModel": "local-picsum-curated",
+      "imageCost": 0,
+      "ttsProvider": "mock",
+      "ttsVoice": "Google EN-Slow",
+      "ttsCost": 0,
+      "duration": 11.33
+    },
+    {
+      "sceneNumber": 3,
+      "narration": "High in the cold sky, this steam cools down and gathers together to form soft white clouds.",
+      "imagePrompt": "Fluffy white clouds forming in a cool blue sky with blue water droplets gathering.",
+      "imageProvider": "mock",
+      "imageModel": "local-picsum-curated",
+      "imageCost": 0,
+      "ttsProvider": "mock",
+      "ttsVoice": "Google EN-Slow",
+      "ttsCost": 0,
+      "duration": 9
+    },
+    {
+      "sceneNumber": 4,
+      "narration": "When clouds get too heavy, they release the water as rain or snow, returning water back to the Earth.",
+      "imagePrompt": "Dark rain clouds pouring down droplets onto a dry green forest and replenishing a river.",
+      "imageProvider": "mock",
+      "imageModel": "local-picsum-curated",
+      "imageCost": 0,
+      "ttsProvider": "mock",
+      "ttsVoice": "Google EN-Slow",
+      "ttsCost": 0,
+      "duration": 9.89
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What heats up the water in lakes and oceans?",
+      "options": [
+        "The wind",
+        "The sun",
+        "Earth's core",
+        "Volcanoes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The sun's heat warms water on the surface, causing it to evaporate."
+    },
+    {
+      "question": "What are clouds made of?",
+      "options": [
+        "Cotton candy",
+        "Smoke",
+        "Invisible steam cooling into water droplets",
+        "Space dust"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Clouds form when rising water vapor (steam) cools and condenses back into liquid water droplets."
+    },
+    {
+      "question": "What is it called when rain falls from heavy clouds?",
+      "options": [
+        "Evaporation",
+        "Condensation",
+        "Precipitation (Rain)",
+        "Freezing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Rain, snow, or sleet falling from the clouds back to Earth is called precipitation."
+    }
+  ],
+  "providers": {
+    "llm": "mock",
+    "image": "mock",
+    "tts": "mock"
+  },
+  "provenance": {
+    "steps": [
+      {
+        "name": "Simplify & Storyboard",
+        "provider": "mock",
+        "modelOrVoice": "mock (local rule-based generator)",
+        "durationMs": 2,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "Image Generation",
+        "provider": "mock",
+        "modelOrVoice": "local-picsum-curated, local-picsum-curated, local-picsum-curated, local-picsum-curated",
+        "durationMs": 6724,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "TTS Narration",
+        "provider": "mock",
+        "modelOrVoice": "Google EN-Slow, Google EN-Slow, Google EN-Slow, Google EN-Slow",
+        "durationMs": 6375,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "Captions Synchronizer",
+        "provider": "local",
+        "modelOrVoice": "WebVTT Phrase Extractor",
+        "durationMs": 11,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "Video Stitching (ffmpeg)",
+        "provider": "ffmpeg",
+        "modelOrVoice": "H.264 / AAC encoder",
+        "durationMs": 34182,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      },
+      {
+        "name": "Storage Upload",
+        "provider": "local",
+        "modelOrVoice": "Local Disk",
+        "durationMs": 0,
+        "cost": 0,
+        "retries": 0,
+        "status": "success"
+      }
+    ],
+    "totalCost": 0,
+    "totalDurationMs": 47324,
+    "b2Uploaded": false
+  }
+}

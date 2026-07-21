@@ -171,7 +171,7 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden glass-panel-glow border border-indigo-500/10 shadow-2xl relative group/player bg-black/90">
+    <div className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl relative group/player">
       
       {/* Video Viewport */}
       <div className="relative aspect-video flex items-center justify-center cursor-pointer select-none" onClick={togglePlay}>
@@ -207,20 +207,20 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
       </div>
 
       {/* Control Panel */}
-      <div className="p-4 bg-gradient-to-t from-black/90 to-[#0e0c20]/90 border-t border-white/5 flex flex-col gap-3">
+      <div className="p-4 bg-slate-50 border-t border-slate-200 flex flex-col gap-3">
         
         {/* Timeline Slider */}
         <div className="flex items-center gap-3">
-          <span className="text-xs text-gray-400 font-medium">{formatTime(currentTime)}</span>
+          <span className="text-xs text-slate-500 font-medium">{formatTime(currentTime)}</span>
           <input
             type="range"
             min={0}
             max={duration || 100}
             value={currentTime}
             onChange={handleSeek}
-            className="flex-1 h-1 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-indigo-500 hover:accent-indigo-400 focus:outline-none"
+            className="flex-1 h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-500 hover:accent-indigo-400 focus:outline-none"
           />
-          <span className="text-xs text-gray-400 font-medium">{formatTime(duration)}</span>
+          <span className="text-xs text-slate-500 font-medium">{formatTime(duration)}</span>
         </div>
 
         {/* Action Controls */}
@@ -229,7 +229,7 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
             {/* Play/Pause */}
             <button
               onClick={togglePlay}
-              className="p-2.5 rounded-xl hover:bg-white/5 text-gray-300 hover:text-white transition-colors"
+              className="p-2.5 rounded-xl hover:bg-slate-200 text-slate-500 hover:text-slate-900 transition-colors"
               title={isPlaying ? 'Pause' : 'Play'}
             >
               {isPlaying ? <Pause className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5 fill-current" />}
@@ -238,7 +238,7 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
             {/* Restart */}
             <button
               onClick={handleRestart}
-              className="p-2.5 rounded-xl hover:bg-white/5 text-gray-300 hover:text-white transition-colors"
+              className="p-2.5 rounded-xl hover:bg-slate-200 text-slate-500 hover:text-slate-900 transition-colors"
               title="Restart Video"
             >
               <RotateCcw className="w-5 h-5" />
@@ -247,10 +247,10 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
             {/* Mute */}
             <button
               onClick={toggleMute}
-              className="p-2.5 rounded-xl hover:bg-white/5 text-gray-300 hover:text-white transition-colors"
+              className="p-2.5 rounded-xl hover:bg-slate-200 text-slate-500 hover:text-slate-900 transition-colors"
               title={isMuted ? 'Unmute' : 'Mute'}
             >
-              {isMuted ? <VolumeX className="w-5 h-5 text-rose-400" /> : <Volume2 className="w-5 h-5" />}
+              {isMuted ? <VolumeX className="w-5 h-5 text-rose-500" /> : <Volume2 className="w-5 h-5" />}
             </button>
 
             {/* Speed Adjuster */}
@@ -259,8 +259,8 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
                 onClick={() => setShowSpeedControls(!showSpeedControls)}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
                   showSpeedControls
-                    ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30'
-                    : 'text-gray-300 hover:text-white border-white/5 bg-white/5 hover:bg-white/10'
+                    ? 'bg-indigo-50 text-indigo-700 border-indigo-200'
+                    : 'text-slate-600 hover:text-slate-900 border-slate-200 bg-white hover:bg-slate-100'
                 }`}
               >
                 <Settings className="w-3.5 h-3.5" />
@@ -268,7 +268,7 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
               </button>
 
               {showSpeedControls && (
-                <div className="absolute bottom-10 left-0 bg-[#121023] border border-white/10 p-1.5 rounded-xl shadow-xl flex flex-col gap-1 z-30 min-w-[100px]">
+                <div className="absolute bottom-10 left-0 bg-white border border-slate-200 p-1.5 rounded-xl shadow-xl flex flex-col gap-1 z-30 min-w-[100px]">
                   {[0.75, 0.85, 1.0, 1.25].map((speed) => (
                     <button
                       key={speed}
@@ -278,8 +278,8 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
                       }}
                       className={`px-3 py-1.5 rounded-lg text-left text-xs font-medium transition-colors ${
                         playbackSpeed === speed
-                          ? 'bg-indigo-500 text-white'
-                          : 'text-gray-400 hover:text-gray-200 hover:bg-white/5'
+                          ? 'bg-indigo-100 text-indigo-700'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                       }`}
                     >
                       {speed === 0.85 || speed === 0.75 ? `${speed.toFixed(2)}x (Slower)` : `${speed.toFixed(2)}x`}
@@ -294,11 +294,11 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
           <div className="flex items-center gap-4">
             
             {/* Caption Size Toggle */}
-            <div className="flex items-center gap-1 bg-white/5 border border-white/5 p-1 rounded-xl">
+            <div className="flex items-center gap-1 bg-white border border-slate-200 shadow-sm p-1 rounded-xl">
               <button
                 onClick={() => setCaptionSize('sm')}
                 className={`p-1.5 rounded-lg text-xs font-bold transition-all ${
-                  captionSize === 'sm' ? 'bg-indigo-500 text-white' : 'text-gray-400 hover:text-gray-200'
+                  captionSize === 'sm' ? 'bg-indigo-500 text-white' : 'text-slate-400 hover:text-slate-700'
                 }`}
                 title="Small Captions"
               >
@@ -307,7 +307,7 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
               <button
                 onClick={() => setCaptionSize('md')}
                 className={`p-1.5 rounded-lg text-sm font-bold transition-all ${
-                  captionSize === 'md' ? 'bg-indigo-500 text-white' : 'text-gray-400 hover:text-gray-200'
+                  captionSize === 'md' ? 'bg-indigo-500 text-white' : 'text-slate-400 hover:text-slate-700'
                 }`}
                 title="Medium Captions"
               >
@@ -316,7 +316,7 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
               <button
                 onClick={() => setCaptionSize('lg')}
                 className={`p-1.5 rounded-lg text-base font-bold transition-all ${
-                  captionSize === 'lg' ? 'bg-indigo-500 text-white' : 'text-gray-400 hover:text-gray-200'
+                  captionSize === 'lg' ? 'bg-indigo-500 text-white' : 'text-slate-400 hover:text-slate-700'
                 }`}
                 title="Large Captions"
               >
@@ -331,7 +331,7 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
                 const nextIdx = (themes.indexOf(captionTheme) + 1) % themes.length;
                 setCaptionTheme(themes[nextIdx]);
               }}
-              className="p-2.5 rounded-xl hover:bg-white/5 text-gray-300 hover:text-white transition-colors"
+              className="p-2.5 rounded-xl hover:bg-slate-200 text-slate-500 hover:text-slate-900 transition-colors"
               title="Change Caption Styling"
             >
               <Type className="w-5 h-5" />
@@ -340,7 +340,7 @@ export default function VideoPlayer({ src, vttSrc, onEnded }: VideoPlayerProps) 
             {/* Fullscreen */}
             <button
               onClick={handleFullscreen}
-              className="p-2.5 rounded-xl hover:bg-white/5 text-gray-300 hover:text-white transition-colors"
+              className="p-2.5 rounded-xl hover:bg-slate-200 text-slate-500 hover:text-slate-900 transition-colors"
               title="Fullscreen"
             >
               <Maximize className="w-5 h-5" />

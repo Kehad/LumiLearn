@@ -136,45 +136,45 @@ export default function Lesson() {
         
         {/* Progress Header */}
         <div className="text-center w-full max-w-md">
-          <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mx-auto mb-4 animate-spin-slow">
+          <div className="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 mx-auto mb-4 animate-spin-slow shadow-sm">
             <Clock className="w-6 h-6" />
           </div>
-          <h2 className="text-2xl font-extrabold text-white">Creating Your Lesson Video</h2>
-          <p className="text-gray-400 text-sm mt-1">This takes about 10–30 seconds. Learn a trivia fact while you wait!</p>
+          <h2 className="text-2xl font-extrabold text-slate-900">Creating Your Lesson Video</h2>
+          <p className="text-slate-500 text-sm mt-1">This takes about 10–30 seconds. Learn a trivia fact while you wait!</p>
         </div>
 
         {/* Dynamic Trivia Card */}
-        <div className="w-full max-w-xl p-6 rounded-3xl bg-[#0f0e24] border border-indigo-500/15 shadow-xl text-center relative overflow-hidden flex flex-col gap-3 min-h-[165px] justify-center items-center">
+        <div className="w-full max-w-xl p-6 rounded-3xl bg-white border border-slate-200 shadow-xl text-center relative overflow-hidden flex flex-col gap-3 min-h-[165px] justify-center items-center">
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
           
-          <span className="text-xs font-bold uppercase tracking-widest text-indigo-400 px-3 py-1 rounded-full bg-indigo-500/10">
+          <span className="text-xs font-bold uppercase tracking-widest text-indigo-700 px-3 py-1 rounded-full bg-indigo-50">
             Did you know? ({TRIVIA_FACTS[triviaIdx].subject})
           </span>
-          <p className="text-base text-gray-200 leading-relaxed font-semibold transition-all duration-500 px-4">
+          <p className="text-base text-slate-800 leading-relaxed font-semibold transition-all duration-500 px-4">
             "{TRIVIA_FACTS[triviaIdx].fact}"
           </p>
         </div>
 
         {/* Pipeline Progress tracker */}
-        <div className="w-full max-w-xl glass-panel rounded-3xl p-6 border border-white/5 flex flex-col gap-5">
+        <div className="w-full max-w-xl bg-white/80 backdrop-blur-xl rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col gap-5">
           <div>
             <div className="flex justify-between items-center text-sm font-semibold mb-2">
-              <span className="text-gray-300 font-bold">Pipeline Steps Tracker</span>
-              <span className="text-indigo-400">{progress}%</span>
+              <span className="text-slate-800 font-bold">Pipeline Steps Tracker</span>
+              <span className="text-indigo-600">{progress}%</span>
             </div>
-            <div className="w-full h-2.5 bg-gray-900 rounded-full overflow-hidden p-[1px]">
+            <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden p-[1px]">
               <div 
                 className="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-amber-400 rounded-full transition-all duration-500"
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <span className="block text-xs text-indigo-300 italic mt-2 text-center font-medium">
+            <span className="block text-xs text-indigo-600 italic mt-2 text-center font-medium">
               Current: {stepName}
             </span>
           </div>
 
           {/* List of steps */}
-          <div className="flex flex-col gap-3 border-t border-white/5 pt-4">
+          <div className="flex flex-col gap-3 border-t border-slate-100 pt-4">
             {[
               { num: 1, name: 'Simplify Text & Core Storyboard' },
               { num: 3, name: 'Illustrate Scenes (SDXL/Flux/DALL-E)' },
@@ -192,21 +192,21 @@ export default function Lesson() {
                   <div className="flex items-center gap-3">
                     <div className={`w-6 h-6 rounded-lg flex items-center justify-center font-bold text-xs ${
                       isCompleted 
-                        ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' 
+                        ? 'bg-emerald-50 text-emerald-600 border border-emerald-200' 
                         : isActive 
-                          ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 animate-pulse'
-                          : 'bg-white/5 text-gray-500 border border-transparent'
+                          ? 'bg-indigo-50 text-indigo-600 border border-indigo-200 animate-pulse'
+                          : 'bg-slate-50 text-slate-400 border border-slate-200'
                     }`}>
                       {isCompleted ? '✓' : stepItem.num === 1 ? '1' : stepItem.num - 1}
                     </div>
                     <span className={`font-medium ${
-                      isCompleted ? 'text-gray-400 line-through' : isActive ? 'text-white font-bold' : 'text-gray-600'
+                      isCompleted ? 'text-slate-400 line-through' : isActive ? 'text-slate-900 font-bold' : 'text-slate-500'
                     }`}>
                       {stepItem.name}
                     </span>
                   </div>
                   {isActive && (
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-indigo-400 animate-pulse">
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-indigo-600 animate-pulse">
                       In progress
                     </span>
                   )}
@@ -248,25 +248,25 @@ export default function Lesson() {
     <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-8 animate-fade-in">
       
       {/* Title & Header info */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/5 pb-6">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-indigo-500/15 text-indigo-300 border border-indigo-500/10">
+            <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-100 shadow-sm">
               {details.subject.toUpperCase()}
             </span>
-            <span className="text-xs text-gray-500 flex items-center gap-1">
+            <span className="text-xs text-slate-500 flex items-center gap-1">
               <Clock className="w-3.5 h-3.5" />
               Generated {new Date(details.timestamp).toLocaleDateString()}
             </span>
           </div>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-tight">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight">
             {details.title || details.topic}
           </h2>
         </div>
         <div className="flex gap-3">
           <Link
             to="/dashboard"
-            className="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10 rounded-xl text-sm font-semibold transition-all hover:scale-102 flex items-center gap-1.5"
+            className="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-sm rounded-xl text-sm font-semibold transition-all hover:scale-102 flex items-center gap-1.5"
           >
             <BarChart3 className="w-4 h-4" />
             My Dashboard
@@ -276,8 +276,8 @@ export default function Lesson() {
 
       {/* Video Segment */}
       <div className="flex flex-col gap-4">
-        <div className="flex justify-between items-center text-sm font-bold text-gray-400 px-1">
-          <span className="flex items-center gap-1 text-indigo-400">
+        <div className="flex justify-between items-center text-sm font-bold text-slate-500 px-1">
+          <span className="flex items-center gap-1 text-indigo-600">
             <Play className="w-4 h-4 fill-current" /> Accessible Video Explainer
           </span>
           <span className="text-xs font-normal">Narrated slowly & illustrated per scene</span>
@@ -293,32 +293,32 @@ export default function Lesson() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* Simplified Script Accordion */}
-        <div className="md:col-span-2 glass-panel rounded-3xl p-6 border border-white/5 flex flex-col gap-4">
+        <div className="md:col-span-2 bg-white/80 backdrop-blur-xl rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col gap-4">
           <button
             onClick={() => setShowScript(!showScript)}
-            className="w-full flex items-center justify-between text-left text-base font-bold text-white"
+            className="w-full flex items-center justify-between text-left text-base font-bold text-slate-900"
           >
             <span className="flex items-center gap-2">
-              <FileText className="w-5 h-5 text-indigo-400" />
+              <FileText className="w-5 h-5 text-indigo-600" />
               Read Simplified Explanation Script
             </span>
-            <span className="text-xs font-semibold text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-xl">
+            <span className="text-xs font-semibold text-indigo-700 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-xl">
               {showScript ? 'Hide' : 'Expand'}
             </span>
           </button>
 
           {showScript && (
-            <div className="flex flex-col gap-5 border-t border-white/5 pt-4 mt-2 animate-fade-in">
+            <div className="flex flex-col gap-5 border-t border-slate-100 pt-4 mt-2 animate-fade-in">
               {details.scenes.map((scene) => (
-                <div key={scene.sceneNumber} className="flex gap-4 items-start bg-white/5 p-4 rounded-2xl border border-white/5">
-                  <span className="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-300 font-bold text-xs flex items-center justify-center shrink-0">
+                <div key={scene.sceneNumber} className="flex gap-4 items-start bg-slate-50 p-4 rounded-2xl border border-slate-100 shadow-sm">
+                  <span className="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0">
                     {scene.sceneNumber}
                   </span>
                   <div>
-                    <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
+                    <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
                       Scene Description
                     </span>
-                    <p className="text-sm text-gray-200 leading-relaxed font-semibold">
+                    <p className="text-sm text-slate-800 leading-relaxed font-semibold">
                       {scene.narration}
                     </p>
                   </div>
@@ -329,33 +329,33 @@ export default function Lesson() {
         </div>
 
         {/* Provenance Audit logs */}
-        <div className="glass-panel rounded-3xl p-6 border border-white/5 flex flex-col gap-4">
-          <h4 className="text-sm font-bold text-white flex items-center gap-2">
-            <Database className="w-4.5 h-4.5 text-amber-400" />
+        <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col gap-4">
+          <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+            <Database className="w-4.5 h-4.5 text-amber-500" />
             Genblaze Provenance Log
           </h4>
           <div className="flex flex-col gap-3 text-xs">
-            <div className="flex justify-between border-b border-white/5 pb-2">
-              <span className="text-gray-500 font-medium">B2 Storage</span>
-              <span className={`font-bold ${details.provenance.b2Uploaded ? 'text-emerald-400' : 'text-amber-400'}`}>
+            <div className="flex justify-between border-b border-slate-100 pb-2">
+              <span className="text-slate-500 font-medium">B2 Storage</span>
+              <span className={`font-bold ${details.provenance.b2Uploaded ? 'text-emerald-600' : 'text-amber-600'}`}>
                 {details.provenance.b2Uploaded ? '✓ Uploaded (Durable)' : 'Local Mirror (Dev)'}
               </span>
             </div>
-            <div className="flex justify-between border-b border-white/5 pb-2">
-              <span className="text-gray-500 font-medium">Simplify LLM</span>
-              <span className="text-gray-300 font-semibold">{details.providers.llm}</span>
+            <div className="flex justify-between border-b border-slate-100 pb-2">
+              <span className="text-slate-500 font-medium">Simplify LLM</span>
+              <span className="text-slate-800 font-semibold">{details.providers.llm}</span>
             </div>
-            <div className="flex justify-between border-b border-white/5 pb-2">
-              <span className="text-gray-500 font-medium">TTS Provider</span>
-              <span className="text-gray-300 font-semibold">{details.providers.tts}</span>
+            <div className="flex justify-between border-b border-slate-100 pb-2">
+              <span className="text-slate-500 font-medium">TTS Provider</span>
+              <span className="text-slate-800 font-semibold">{details.providers.tts}</span>
             </div>
-            <div className="flex justify-between border-b border-white/5 pb-2">
-              <span className="text-gray-500 font-medium">Image Gen</span>
-              <span className="text-gray-300 font-semibold">{details.providers.image}</span>
+            <div className="flex justify-between border-b border-slate-100 pb-2">
+              <span className="text-slate-500 font-medium">Image Gen</span>
+              <span className="text-slate-800 font-semibold">{details.providers.image}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500 font-medium">Pipeline Duration</span>
-              <span className="text-gray-300 font-semibold">
+              <span className="text-slate-500 font-medium">Pipeline Duration</span>
+              <span className="text-slate-800 font-semibold">
                 {(details.provenance.totalDurationMs / 1000).toFixed(1)}s
               </span>
             </div>
@@ -366,13 +366,13 @@ export default function Lesson() {
 
       {/* Quiz Section */}
       {showQuiz && (
-        <div id="quiz-section" className="border-t border-white/5 pt-8 flex flex-col gap-6 animate-slide-up bg-black/20 p-6 rounded-3xl border border-white/5">
+        <div id="quiz-section" className="border-t border-slate-200 pt-8 flex flex-col gap-6 animate-slide-up bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm">
           <div className="text-center max-w-md mx-auto">
-            <h3 className="text-2xl font-extrabold text-white flex items-center justify-center gap-2">
-              <HelpCircle className="w-6 h-6 text-indigo-400" />
+            <h3 className="text-2xl font-extrabold text-slate-900 flex items-center justify-center gap-2">
+              <HelpCircle className="w-6 h-6 text-indigo-600" />
               Check Your Understanding
             </h3>
-            <p className="text-gray-400 text-sm mt-1">Take the interactive quiz below to lock in the information!</p>
+            <p className="text-slate-500 text-sm mt-1">Take the interactive quiz below to lock in the information!</p>
           </div>
 
           {/* Render the interactive quiz */}

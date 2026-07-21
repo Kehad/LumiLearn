@@ -1,5 +1,41 @@
 [
   {
+    "lessonId": "4ddd04a3-09c5-4dba-9a8d-de06e207a5f3",
+    "title": "The Water Cycle: Earth's Recycling System",
+    "topic": "The water cycle shows the continuous movement of water within the Earth and atmosphere. It is a complex system that includes many different processes. Liquid water evaporates into water vapor, condenses to form clouds, and precipitates back to earth in the form of rain and snow.",
+    "subject": "general",
+    "timestamp": "2026-07-21T01:03:52.474Z",
+    "thumbnailUrl": "/lessons/4ddd04a3-09c5-4dba-9a8d-de06e207a5f3/scenes/scene_1/image.png",
+    "quizScore": null
+  },
+  {
+    "lessonId": "8fc8b861-f4a9-4d75-874f-4e7f9b18b401",
+    "title": "Photosynthesis: How Plants Make Food",
+    "topic": "Photosynthesis is the process by which green plants and certain other organisms transform light energy into chemical energy. During photosynthesis in green plants, light energy is captured and used to convert water, carbon dioxide, and minerals into oxygen and energy-rich organic compounds.",
+    "subject": "biology",
+    "timestamp": "2026-07-21T00:16:50.843Z",
+    "thumbnailUrl": "/lessons/8fc8b861-f4a9-4d75-874f-4e7f9b18b401/scenes/scene_1/image.png",
+    "quizScore": null
+  },
+  {
+    "lessonId": "19132eaf-b028-4657-a980-47c4395abf23",
+    "title": "Photosynthesis: How Plants Make Food",
+    "topic": "Photosynthesis is the process by which green plants and certain other organisms transform light energy into chemical energy. During photosynthesis in green plants, light energy is captured and used to convert water, carbon dioxide, and minerals into oxygen and energy-rich organic compounds.",
+    "subject": "biology",
+    "timestamp": "2026-07-21T00:16:23.459Z",
+    "thumbnailUrl": "/lessons/19132eaf-b028-4657-a980-47c4395abf23/scenes/scene_1/image.png",
+    "quizScore": null
+  },
+  {
+    "lessonId": "6fac24bc-7888-4345-afd4-2f562385438c",
+    "title": "Photosynthesis: How Plants Make Food",
+    "topic": "Photosynthesis is the process by which green plants and certain other organisms transform light energy into chemical energy. During photosynthesis in green plants, light energy is captured and used to convert water, carbon dioxide, and minerals into oxygen and energy-rich organic compounds.",
+    "subject": "biology",
+    "timestamp": "2026-07-21T00:15:55.539Z",
+    "thumbnailUrl": "/lessons/6fac24bc-7888-4345-afd4-2f562385438c/scenes/scene_1/image.png",
+    "quizScore": null
+  },
+  {
     "lessonId": "5f4b327a-394b-4c94-9e1c-5db1c7b5ac22",
     "title": "Introduction to Axial skeletion",
     "topic": "Axial skeletion",

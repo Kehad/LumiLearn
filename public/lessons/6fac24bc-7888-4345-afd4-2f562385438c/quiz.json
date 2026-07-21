@@ -1,0 +1,35 @@
+[
+  {
+    "question": "What do plants use to capture sunlight?",
+    "options": [
+      "Chlorophyll",
+      "Roots",
+      "Stems",
+      "Oxygen"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Chlorophyll is the green pigment in leaves that absorbs sunlight like a solar panel."
+  },
+  {
+    "question": "What gas do plants release for humans to breathe?",
+    "options": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Helium"
+    ],
+    "correctAnswer": "B",
+    "explanation": "During photosynthesis, plants release oxygen, which humans and animals need to breathe."
+  },
+  {
+    "question": "Where do plants get water from?",
+    "options": [
+      "The air",
+      "The clouds",
+      "The soil through roots",
+      "The sun"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Plants absorb water and nutrients from the soil using their roots."
+  }
+]

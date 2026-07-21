@@ -92,32 +92,32 @@ export default function Landing() {
       
       {/* Hero Headline */}
       <div className="text-center max-w-2xl flex flex-col gap-3">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-500/5 text-indigo-400 text-xs font-semibold uppercase tracking-widest mx-auto animate-pulse-slow">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-200 bg-indigo-50 text-indigo-600 text-xs font-semibold uppercase tracking-widest mx-auto animate-pulse-slow">
           <Sparkles className="w-3.5 h-3.5" />
           Nigerian Syllabus Aligned
         </div>
-        <h1 className="text-4xl md:text-6xl font-black text-white leading-tight">
-          Understand Any Textbook <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-amber-300 bg-clip-text text-transparent">Instantly</span>
+        <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
+          Understand Any Textbook <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-amber-500 bg-clip-text text-transparent">Instantly</span>
         </h1>
-        <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
+        <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
           Paste dense, difficult paragraphs from your school notes or textbook. We build a slow narrated video and an interactive quiz to help you learn!
         </p>
       </div>
 
       {/* Main Generator Card */}
-      <form onSubmit={handleGenerate} className="w-full glass-panel-glow rounded-3xl p-6 md:p-8 border border-indigo-500/10 flex flex-col gap-6 shadow-2xl relative bg-[#0e0c20]/90">
+      <form onSubmit={handleGenerate} className="w-full bg-white/80 backdrop-blur-2xl rounded-3xl p-6 md:p-8 border border-slate-200 flex flex-col gap-6 shadow-xl relative">
         
         {/* Input Area */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-bold text-gray-300 flex items-center justify-between">
+          <label className="text-sm font-bold text-slate-700 flex items-center justify-between">
             <span>Paste your topic or textbook passage here</span>
-            <span className="text-xs font-normal text-gray-500">{topicText.length}/3000 chars</span>
+            <span className="text-xs font-normal text-slate-500">{topicText.length}/3000 chars</span>
           </label>
           <textarea
             value={topicText}
             onChange={(e) => setTopicText(e.target.value)}
             placeholder="Example: Photosynthesis, cell division, or write: 'Explain Newton's laws of motion with simple examples'..."
-            className="w-full min-h-[160px] md:min-h-[200px] glass-input rounded-2xl p-4 text-sm md:text-base text-gray-200 placeholder-gray-600 resize-y"
+            className="w-full min-h-[160px] md:min-h-[200px] bg-white border border-slate-200 rounded-2xl p-4 text-sm md:text-base text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 resize-y shadow-sm"
             disabled={isSubmitting}
             required
           />
@@ -125,13 +125,13 @@ export default function Landing() {
 
         {/* Example Presets */}
         <div className="flex flex-wrap items-center gap-2 text-xs">
-          <span className="text-gray-500 font-semibold uppercase tracking-wider">Try an example:</span>
+          <span className="text-slate-500 font-semibold uppercase tracking-wider">Try an example:</span>
           {PRESETS.map((preset, idx) => (
             <button
               key={idx}
               type="button"
               onClick={() => handlePresetSelect(preset)}
-              className="px-3 py-1.5 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-white/10 text-gray-300 font-semibold transition-all hover:scale-[1.02]"
+              className="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 text-slate-700 font-semibold transition-all hover:scale-[1.02] shadow-sm"
               disabled={isSubmitting}
             >
               {preset.label}
@@ -140,8 +140,8 @@ export default function Landing() {
         </div>
 
         {/* Subject Taxonomy Selector */}
-        <div className="flex flex-col gap-3 border-t border-white/5 pt-4">
-          <span className="text-sm font-bold text-gray-300">Select Subject Category</span>
+        <div className="flex flex-col gap-3 border-t border-slate-100 pt-4">
+          <span className="text-sm font-bold text-slate-700">Select Subject Category</span>
           <div className="flex flex-wrap gap-2.5">
             {SUBJECT_TAGS.map((tag) => (
               <button
@@ -150,7 +150,7 @@ export default function Landing() {
                 onClick={() => setSelectedSubject(tag.id)}
                 className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold border transition-all hover:scale-[1.02] ${
                   selectedSubject === tag.id
-                    ? 'border-indigo-500 bg-indigo-500/20 text-indigo-300 shadow-md shadow-indigo-500/10 scale-102'
+                    ? 'border-indigo-500 bg-indigo-50 text-indigo-700 shadow-md shadow-indigo-500/10 scale-102'
                     : tag.color
                 }`}
                 disabled={isSubmitting}
@@ -162,33 +162,33 @@ export default function Landing() {
         </div>
 
         {/* Mock Mode Switch Banner */}
-        <div className="bg-indigo-950/20 border border-indigo-500/10 p-4 rounded-2xl flex items-start gap-3 text-xs leading-relaxed text-indigo-200">
-          <AlertCircle className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+        <div className="bg-indigo-50 border border-indigo-100 p-4 rounded-2xl flex items-start gap-3 text-xs leading-relaxed text-indigo-800">
+          <AlertCircle className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" />
           <div>
-            <span className="block font-bold text-indigo-300 mb-0.5">Offline-Friendly Mock Mode is Active by Default</span>
-            To make evaluation instant, LumiLearn runs in a local sandbox mode using Google Translate TTS and curated high-quality stock illustrations. It requires zero API keys to generate full MP4 videos and quizzes! Uncheck "Mock Mode" in the settings below if you have added API keys in your <code className="bg-[#181635] px-1 rounded font-mono text-indigo-300">.env</code>.
+            <span className="block font-bold text-indigo-900 mb-0.5">Offline-Friendly Mock Mode is Active by Default</span>
+            To make evaluation instant, LumiLearn runs in a local sandbox mode using Google Translate TTS and curated high-quality stock illustrations. It requires zero API keys to generate full MP4 videos and quizzes! Uncheck "Mock Mode" in the settings below if you have added API keys in your <code className="bg-indigo-100 px-1 rounded font-mono text-indigo-900 border border-indigo-200">.env</code>.
           </div>
         </div>
 
         {/* Advanced Settings Toggle */}
-        <div className="border-t border-white/5 pt-4">
+        <div className="border-t border-slate-100 pt-4">
           <button
             type="button"
             onClick={() => setShowAdvanced(!showAdvanced)}
-            className="flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-gray-300 transition-colors uppercase tracking-wider"
+            className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-slate-800 transition-colors uppercase tracking-wider"
           >
             <Settings2 className="w-4 h-4" />
             {showAdvanced ? 'Hide API Settings' : 'Advanced API & Provider settings'}
           </button>
 
           {showAdvanced && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 p-5 rounded-2xl bg-black/40 border border-white/5 animate-slide-down">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-inner animate-slide-down">
               
               {/* Sandbox Toggle */}
-              <div className="flex items-center justify-between col-span-1 md:col-span-2 border-b border-white/5 pb-3">
+              <div className="flex items-center justify-between col-span-1 md:col-span-2 border-b border-slate-200 pb-3">
                 <div>
-                  <span className="block text-sm font-bold text-white">Enable Sandbox Mock Mode</span>
-                  <span className="block text-[11px] text-gray-500">Run local generation pipeline (no keys needed)</span>
+                  <span className="block text-sm font-bold text-slate-800">Enable Sandbox Mock Mode</span>
+                  <span className="block text-[11px] text-slate-500">Run local generation pipeline (no keys needed)</span>
                 </div>
                 <input
                   type="checkbox"
@@ -201,11 +201,11 @@ export default function Landing() {
 
               {/* LLM Select */}
               <div className="flex flex-col gap-1">
-                <span className="text-xs font-semibold text-gray-400">Simplification LLM</span>
+                <span className="text-xs font-semibold text-slate-600">Simplification LLM</span>
                 <select
                   value={llmProvider}
                   onChange={(e) => setLlmProvider(e.target.value)}
-                  className="w-full bg-[#121025] text-gray-300 border border-white/10 rounded-xl px-3 py-2 text-xs focus:outline-none"
+                  className="w-full bg-white text-slate-800 border border-slate-200 shadow-sm rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-500"
                   disabled={isMockMode || isSubmitting}
                 >
                   <option value="gemini">Gemini (gemini-1.5-flash)</option>
@@ -215,11 +215,11 @@ export default function Landing() {
 
               {/* Image Gen Select */}
               <div className="flex flex-col gap-1">
-                <span className="text-xs font-semibold text-gray-400">Illustration Generator</span>
+                <span className="text-xs font-semibold text-slate-600">Illustration Generator</span>
                 <select
                   value={imageProvider}
                   onChange={(e) => setImageProvider(e.target.value)}
-                  className="w-full bg-[#121025] text-gray-300 border border-white/10 rounded-xl px-3 py-2 text-xs focus:outline-none"
+                  className="w-full bg-white text-slate-800 border border-slate-200 shadow-sm rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-500"
                   disabled={isMockMode || isSubmitting}
                 >
                   <option value="openai">OpenAI (DALL-E 3)</option>
@@ -230,11 +230,11 @@ export default function Landing() {
 
               {/* TTS Voice Select */}
               <div className="flex flex-col gap-1">
-                <span className="text-xs font-semibold text-gray-400">Narration Voice Provider</span>
+                <span className="text-xs font-semibold text-slate-600">Narration Voice Provider</span>
                 <select
                   value={ttsProvider}
                   onChange={(e) => setTtsProvider(e.target.value)}
-                  className="w-full bg-[#121025] text-gray-300 border border-white/10 rounded-xl px-3 py-2 text-xs focus:outline-none"
+                  className="w-full bg-white text-slate-800 border border-slate-200 shadow-sm rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-500"
                   disabled={isMockMode || isSubmitting}
                 >
                   <option value="elevenlabs">ElevenLabs (Acoustic AI)</option>
@@ -244,11 +244,11 @@ export default function Landing() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <span className="text-xs font-semibold text-gray-400">ElevenLabs Voice Model</span>
+                <span className="text-xs font-semibold text-slate-600">ElevenLabs Voice Model</span>
                 <select
                   value={ttsVoice}
                   onChange={(e) => setTtsVoice(e.target.value)}
-                  className="w-full bg-[#121025] text-gray-300 border border-white/10 rounded-xl px-3 py-2 text-xs focus:outline-none"
+                  className="w-full bg-white text-slate-800 border border-slate-200 shadow-sm rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-500"
                   disabled={isMockMode || isSubmitting}
                 >
                   <option value="Rachel">Rachel (Clear, Female)</option>
